@@ -17,7 +17,7 @@ export class Pact {
   @Prop({ default: 'active' })
   status: string; // active, completed, cancelled
 
-  @Prop()
+  @Prop({ default: () => new Date() })
   startDate?: Date;
 
   @Prop()
